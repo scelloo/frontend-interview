@@ -43,16 +43,14 @@ export default {
 .up {
   margin-top: -10px;
 }
-.index{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 30px;
-  margin-top: 60px;
+.index-content {
+  display: flex;
+  justify-content: center;
 }
-.index h2{
-  font-size: 1.8em;
-  text-align: center;
-  margin-top: 0;
+.card {
+  width: 20%;
+  border-radius: 10px;
+ 
 }
 .index .delete {
   position: absolute;
