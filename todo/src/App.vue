@@ -54,12 +54,6 @@ export default {
   text-align: center;
   margin-top: 0;
 }
-.index ingredients{
-  margin: 30px auto;
-}
-.index .ingredients li{
-  display: inline-block;
-}
 .index .delete {
   position: absolute;
   top: 4px;
