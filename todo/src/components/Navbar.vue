@@ -4,7 +4,7 @@
     <div class="nav-content">
     
     <router-link :to="{ name: 'Index'}">
-        <span class="nav-title">Ninja Smoothies</span>
+        <span class="nav-title">Todo app</span>
     </router-link>
     <a href="" class="btn-floating btn-large halfway-fab red">
         <router-link :to="{name: 'AddSmoothie' }">
