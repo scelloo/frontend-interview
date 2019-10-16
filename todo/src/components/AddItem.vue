@@ -26,7 +26,7 @@
 <script>
 import slugify from 'slugify'
 export default {
-    name: 'AddSmoothie',
+    name: 'AddItem',
     data(){
         return{
           title: null,

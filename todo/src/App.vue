@@ -1,31 +1,10 @@
 <template>
   <div id="app">
-    <div id="nav">
       <!-- The navbar -->
       <Navbar/>       
     <!-- End of navigation bar -->
     <router-view/>
-       </div>
-      <div class="index-container">
-        <h5 style="text-align: center;">Add your daily todo</h5>
-      <div class="card">
-        <div class="card-content">
-     <i class="material-icons delete" >delete</i>
-     <h2 class="indigo-text"></h2>
-     <ul class="ingredients">
-       <li >
-         <span class="chip"></span>
-       </li>
-     </ul>
-        </div>
-<span class="btn-floating btn-large halfway-fab red">
-      
-     </span>
-      </div>
-      </div>
-    </div>
-    
-  
+    </div>  
 </template>
 
 <script>
@@ -51,6 +30,9 @@ export default {
   width: 20%;
   border-radius: 10px;
  
+}
+.btn-large {
+  font-style: bold;
 }
 .index .delete {
   position: absolute;
