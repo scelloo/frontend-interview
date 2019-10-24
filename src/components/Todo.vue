@@ -4,20 +4,20 @@
     <input type="text" v-model="newTodo">
     <button @click="handleAdd" :disabled="newTodo.length < 1">Add</button>
     <ul v-for="todo in todos" :key="todo.id">
-      <li>{{todo.detail}}</li>
-      <button @click="remove(todo.id)">Delete</button>
-      <button @click="edit({id: todo.id, item: newTodo})" :disabled="newTodo.length < 1">
-        Edit
-      </button>
+      <TodoItem :todo="todo" :newTodo="newTodo" :clearInput="clearInput"/>
     </ul>
   </div>
 </template>
 
 <script>
 import { mapState, mapActions } from 'vuex';
+import TodoItem from './TodoItem.vue';
 
 export default {
   name: 'todo',
+  components: {
+    TodoItem,
+  },
   data() {
     return {
       newTodo: '',
@@ -31,11 +31,12 @@ export default {
   methods: {
     ...mapActions([
       'add',
-      'remove',
-      'edit',
     ]),
     handleAdd() {
       this.add(this.newTodo);
+      this.clearInput();
+    },
+    clearInput() {
       this.newTodo = '';
     },
   },
