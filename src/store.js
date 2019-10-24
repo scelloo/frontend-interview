@@ -9,7 +9,7 @@ export default new Vuex.Store({
     todos: getItem('todos') || [],
   },
   mutations: {
-    appendTodo(state, todo) {
+    addTodo(state, todo) {
       const item = { id: state.todos.length + 1, detail: todo };
       state.todos.push(item);
       setItem('todos', state.todos);
@@ -27,7 +27,7 @@ export default new Vuex.Store({
   },
   actions: {
     add({ commit }, todo) {
-      commit('appendTodo', todo);
+      commit('addTodo', todo);
     },
     remove({ commit }, id) {
       commit('removeTodo', id);
